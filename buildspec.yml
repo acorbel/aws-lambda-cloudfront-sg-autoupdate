@@ -5,9 +5,10 @@ phases:
     commands:
       - echo Build started on `date`
       - echo Compiling the Python code...
-      - python lambda_function.py
+      - pip install -t ./
   post_build:
     commands:
+      - python lambda_function.py
       - echo Build completed on `date`
 artifacts:
   files:
